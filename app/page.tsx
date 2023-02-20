@@ -1,10 +1,10 @@
-
+"use client";
 import Navbar from "./(components)/navbar";
-import { wrapper } from "./(store)/store";
+import Content from "./(components)/content";
 
 export default function Home() {
   
- 
+
   
   return (
 
@@ -12,7 +12,8 @@ export default function Home() {
     <>
       
         <Navbar />
-     
+        <Content />
+        
     
     </>
 

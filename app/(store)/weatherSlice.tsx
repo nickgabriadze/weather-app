@@ -1,17 +1,26 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 
+interface State {
+    city: string;
+
+}
+
+const initialState: State = {
+    city: "Kutaisi",
+}
 
 
 const weatherSlice = createSlice({
     name: "weather",
-    initialState: {
-        city: "Kutaisi",
-    },
+    initialState,
     reducers: {
-       setWeatherLocation: (state, action) => {
-            return {...state, city: action.payload.city }
-       }
+        setWeatherLocation: (state, action) => {
+            return {
+                 ...state, 
+                 city: action.payload.providedCity,
+                }
+        }
     },
 })
 
