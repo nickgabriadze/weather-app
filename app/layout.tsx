@@ -1,3 +1,6 @@
+"use client"
+import { Provider } from 'react-redux'
+import { weatherStore } from './(store)/store'
 import './globals.css'
 
 export default function RootLayout({
@@ -12,7 +15,12 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body>
+       <Provider store={weatherStore}>
+        {children}
+        </Provider>
+        
+        </body>
     </html>
   )
 }
