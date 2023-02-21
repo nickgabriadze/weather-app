@@ -128,3 +128,49 @@
   filter: progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=135, Color=#807EA1);
   /*IE 5.5-7*/
 }
+
+.show-full-hourly {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.show-full-hourly h1{
+  text-align: center;
+  color: #7a2231;
+  border: 1px solid #a7a7b4;
+  padding: 5px;
+  cursor: pointer;
+  width: fit-content;
+  border-radius: 5px;
+  font-family: 'Quicksand', 'sans-serif';
+}
+
+.show-full-hourly h1:hover{
+  transform: scale(1.05);
+  transition: 0.3s linear;
+}
+
+.show-full-hourly h1:active{
+  transform: scale(0.95);
+  transition: 0.3s linear;
+}
+
+
+@media screen and (max-width:768px) {
+  .header-icon{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .city-txt{
+    justify-content: center;
+    align-items: center;
+  }
+  .day-txt{
+    margin-bottom: -20px;
+    text-align: center;
+  }
+  .city-icon{
+    margin: 0 0 0 0;
+  }
+}
