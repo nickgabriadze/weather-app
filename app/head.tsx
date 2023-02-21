@@ -6,5 +6,5 @@ export default function Head() {
       <meta name="description" content="Weather forecast app" />
       <link rel="icon" href="/favicon.svg" />
     </>
-  )
+  );
 }

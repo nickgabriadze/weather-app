@@ -1,135 +1,130 @@
 .content-wrapper {
-    padding: 10px;
+  padding: 10px;
 }
 
 .header {
-    font-family: "Quicksand", "sans-serif";
-    color: #acacc4;
-    display:flex;
-    flex-direction: row;
-    gap: 2rem;
-    flex-wrap: wrap;
-    align-items: center;  
-    justify-content: center;
-    
+  font-family: "Quicksand", "sans-serif";
+  color: #acacc4;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .city-txt {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 .day-txt {
-    font-size: 2rem;
-    color: #7a2231
+  font-size: 2rem;
+  color: #7a2231;
 }
 
 .city-icon {
-    margin-top: -3rem;
-    margin-left: 3rem;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    gap: 20px;
+  margin-top: -3rem;
+  margin-left: 3rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
 }
 
 .header-content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .current-weather-info {
-    border: 1px solid #acacc4;
-    border-radius: 5px;
-    display: flex;
-    gap: 20px;
-    padding: 10px;
-    align-items: center;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=0, Color=#807EA1)";
-    /*IE 8*/
-    -moz-box-shadow: 0 1px 6px #807EA1;
-    /*FF 3.5+*/
-    -webkit-box-shadow: 0 1px 6px #807EA1;
-    /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
-    box-shadow: 0 1px 6px #807EA1;
-    /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=135, Color=#807EA1);
-    /*IE 5.5-7*/
+  border: 1px solid #acacc4;
+  border-radius: 5px;
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  align-items: center;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=0, Color=#807EA1)";
+  /*IE 8*/
+  -moz-box-shadow: 0 1px 6px #807ea1;
+  /*FF 3.5+*/
+  -webkit-box-shadow: 0 1px 6px #807ea1;
+  /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  box-shadow: 0 1px 6px #807ea1;
+  /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=135, Color=#807EA1);
+  /*IE 5.5-7*/
 }
 
 .temperature {
-    font-size: 2.8rem;
+  font-size: 2.8rem;
 }
 
-.precip{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+.precip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .precip p {
-    margin-top: -20px;
+  margin-top: -20px;
 }
 
-.current-weather-info-desc{
-    border: 1px solid #acacc4;
-    border-radius: 5px;
-    display: flex;
-    gap: 20px;
-    padding: 10px;
-    align-items: center;
-    width: 20rem;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=0, Color=#807EA1)";
-    /*IE 8*/
-    -moz-box-shadow: 0 1px 6px #807EA1;
-    /*FF 3.5+*/
-    -webkit-box-shadow: 0 1px 6px #807EA1;
-    /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
-    box-shadow: 0 1px 6px #807EA1;
-    /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=135, Color=#807EA1);
-    /*IE 5.5-7*/
+.current-weather-info-desc {
+  border: 1px solid #acacc4;
+  border-radius: 5px;
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  align-items: center;
+  width: 20rem;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=0, Color=#807EA1)";
+  /*IE 8*/
+  -moz-box-shadow: 0 1px 6px #807ea1;
+  /*FF 3.5+*/
+  -webkit-box-shadow: 0 1px 6px #807ea1;
+  /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  box-shadow: 0 1px 6px #807ea1;
+  /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=135, Color=#807EA1);
+  /*IE 5.5-7*/
 }
 
-
-.hourly{
-    font-family: "Quicksand", "sans-serif";
-    font-size: medium;
-
+.hourly {
+  font-family: "Quicksand", "sans-serif";
+  font-size: medium;
 }
 
-.hourly h1{
-    color: #acacc4 !important;
-    text-align: center;
+.hourly h1 {
+  color: #acacc4 !important;
+  text-align: center;
 }
 
-.hour-boxes{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+.hour-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
-.each-hour-box{
-    border: 1px solid #acacc4;
-    border-radius: 10px;
-    display: flex;
-    color: #acacc4;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 10rem;
-    height: fit-content;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=0, Color=#807EA1)";
-    /*IE 8*/
-    -moz-box-shadow: 0 1px 6px #807EA1;
-    /*FF 3.5+*/
-    -webkit-box-shadow: 0 1px 6px #807EA1;
-    /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
-    box-shadow: 0 1px 6px #807EA1;
-    /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=135, Color=#807EA1);
-    /*IE 5.5-7*/
-    
+.each-hour-box {
+  border: 1px solid #acacc4;
+  border-radius: 10px;
+  display: flex;
+  color: #acacc4;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  height: fit-content;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=0, Color=#807EA1)";
+  /*IE 8*/
+  -moz-box-shadow: 0 1px 6px #807ea1;
+  /*FF 3.5+*/
+  -webkit-box-shadow: 0 1px 6px #807ea1;
+  /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  box-shadow: 0 1px 6px #807ea1;
+  /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=135, Color=#807EA1);
+  /*IE 5.5-7*/
 }

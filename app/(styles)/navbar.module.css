@@ -1,92 +1,81 @@
 .wrapper {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: fit-content;
-    border-bottom: 1px solid black;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=14, Direction=0, Color=#DFDEFF)";
-    /*IE 8*/
-    -moz-box-shadow: 0 2px 14px 3px #a7a7b4;
-    /*FF 3.5+*/
-    -webkit-box-shadow: 0 2px 14px 3px #a7a7b4;
-    /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
-    box-shadow: 0 2px 14px 3px #a7a7b4;
-    /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=14, Direction=135, Color=#a7a7b4);
-    /*IE 5.5-7*/
-    font-family: "Raleway", "sans-serif";
-    color: #a7a7b4;
-    display: flex;
-    flex: 0 1 auto;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
-
-
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: fit-content;
+  border-bottom: 1px solid black;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=14, Direction=0, Color=#DFDEFF)";
+  /*IE 8*/
+  -moz-box-shadow: 0 2px 14px 3px #a7a7b4;
+  /*FF 3.5+*/
+  -webkit-box-shadow: 0 2px 14px 3px #a7a7b4;
+  /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  box-shadow: 0 2px 14px 3px #a7a7b4;
+  /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=14, Direction=135, Color=#a7a7b4);
+  /*IE 5.5-7*/
+  font-family: "Raleway", "sans-serif";
+  color: #a7a7b4;
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
 }
 
 .weather-txt {
-    flex: 1 0 auto;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+  flex: 1 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .search-city {
-
-    flex: 0 1 auto;
-    margin-left: auto;
-    padding: 30px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  flex: 0 1 auto;
+  margin-left: auto;
+  padding: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .search {
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    border: 1px solid #a7a7b4;
-    border-radius: 10px;
-   
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid #a7a7b4;
+  border-radius: 10px;
 }
-
-
 
 .search-city input {
-    outline: none;
-    font-size: large;
-    background-color: inherit;
-    border: none;
-    color: #a7a7b4;
-    width: 3.8rem;
-  
+  outline: none;
+  font-size: large;
+  background-color: inherit;
+  border: none;
+  color: #a7a7b4;
+  width: 3.8rem;
 }
 .search-city input:focus {
-    width: 10rem;
-    transition: width 0.5s linear;
+  width: 10rem;
+  transition: width 0.5s linear;
 }
 
-
-
-
-.enter{
-    background-color: inherit;
-    border: 1px solid #a7a7b4;
-    color:#a7a7b4;
-    width: fit-content;
-    font-size: large;
-    padding: 4px;
-    border-radius: 10px;
-    cursor: pointer;
+.enter {
+  background-color: inherit;
+  border: 1px solid #a7a7b4;
+  color: #a7a7b4;
+  width: fit-content;
+  font-size: large;
+  padding: 4px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-.enter:hover{
-    transform: scale(1.1);
-    transition: all 0.3s linear;
+.enter:hover {
+  transform: scale(1.1);
+  transition: all 0.3s linear;
 }
-.enter:active{
-    transform: scale(0.9);
+.enter:active {
+  transform: scale(0.9);
 }
