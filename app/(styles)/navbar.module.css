@@ -50,12 +50,9 @@
   background-color: inherit;
   border: none;
   color: #a7a7b4;
-  width: 3.8rem;
-}
-.search-city input:focus {
   width: 10rem;
-  transition: width 0.5s linear;
 }
+
 
 .enter {
   background-color: inherit;

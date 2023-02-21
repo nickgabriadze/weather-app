@@ -14,7 +14,7 @@ const Navbar = () => {
     <>
       <div className={navstyle["wrapper"]}>
         <h1 className={navstyle["weather-txt"]}>Weather⛅</h1>
-
+        
         <div className={navstyle["search-city"]}>
           <div className={navstyle["search"]}>
             <Image

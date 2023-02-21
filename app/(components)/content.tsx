@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useAppSelector } from "../(store)/store";
 import contentstyle from "../(styles)/content.module.css";
@@ -6,7 +7,7 @@ import Image from "next/image";
 import windPowerIcon from "public/wind-power-icon.svg";
 import precipitationIcon from "public/precipitation-icon.svg";
 import descriptionIcon from "public/description-icon.svg";
-import LoadingPage from "./loading";
+import LoadingPage from "./loadingPage";
 
 const icons: { [key: string]: string } = {
   "clear-day": "/weather/clear-day.svg",
@@ -53,8 +54,7 @@ const Content = () => {
       .then((data) => {
         setLoadingPhase(false);
         setWeatherData(data);
-      })
-      .catch((err) => console.log(err));
+      });
   }, [url, loadingPhase]);
 
   const currentHourData = () => {
@@ -89,9 +89,12 @@ const Content = () => {
         <div className={contentstyle["content-wrapper"]}>
           <div className={contentstyle["header"]}>
             <div className={contentstyle["header-content"]}>
-              <h2 className={contentstyle["day-txt"]}>{`${
-                weekDays[new Date().getDay()]
-              }, ${formattedTime}`}</h2>
+              <div className={contentstyle['timestamp-seeweekly']}>
+                <h2 className={contentstyle["day-txt"]}>
+                  {`${weekDays[new Date().getDay()]}, ${formattedTime}`}
+                </h2>
+                <Link href={`/weekly/${city}`} className={contentstyle['weekly']} ><h2>See weekly forecast</h2></Link>
+              </div>
 
               <div className={contentstyle["city-icon"]}>
                 <h1 className={contentstyle["city-txt"]}>
@@ -157,7 +160,7 @@ const Content = () => {
                       Number(each.datetime.split(":")[0]) >=
                       new Date().getHours()
                     );
-                  }else{
+                  } else {
                     return true;
                   }
                 })

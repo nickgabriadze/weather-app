@@ -1,5 +1,5 @@
+"use client";
 const LoadingPage = () => {
-
 
 
     return (
@@ -19,7 +19,7 @@ const LoadingPage = () => {
                  fontSize: '2rem',
                  color: '#7a2231',
                  fontFamily: `'Quicksand', 'sans-serif`
-            }}>Loading 🌦️</h1>
+            }}>Loading 🌥️</h1>
         </div>
     )
 }
