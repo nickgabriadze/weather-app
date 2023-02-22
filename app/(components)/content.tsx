@@ -8,26 +8,7 @@ import windPowerIcon from "public/wind-power-icon.svg";
 import precipitationIcon from "public/precipitation-icon.svg";
 import descriptionIcon from "public/description-icon.svg";
 import LoadingPage from "./loadingPage";
-
-const icons: { [key: string]: string } = {
-  "clear-day": "/weather/clear-day.svg",
-  "clear-night": "/weather/clear-night.svg",
-  cloudy: "/weather/cloudy.svg",
-  fog: "/weather/fog.svg",
-  hail: "/weather/hail.svg",
-  "partly-cloudy-day": "/weather/partly-cloudy-day.svg",
-  "partly-cloudy-night": "/weather/partly-cloudy-night.svg",
-  "rain-snow-showers-day": "/weather/rain-snow-showers-day.svg",
-  "rain-snow-showers-night": "/weather/rain-snow-showers-night.svg",
-  rain: "/weather/rain.svg",
-  "showers-day": "/weather/showers-day.svg",
-  "showers-night": "/weather/showers-night.svg",
-  sleet: "/weather/sleet.svg",
-  "snow-showers-day": "/weather/snow-showers-day.svg",
-  "snow-showers-night": "/weather/snow-showers-night.svg",
-  snow: "/weather/snow.svg",
-  "thunder-rain": "/weather/thunder-rain.svg",
-};
+import { icons } from "../icons";
 
 const weekDays: { [key: number]: string } = {
   1: "Mon",
@@ -56,6 +37,10 @@ const Content = () => {
         setWeatherData(data);
       });
   }, [url, loadingPhase]);
+
+  useEffect(() => {
+      setLoadingPhase(true);
+  }, [city])
 
   const currentHourData = () => {
     if (!loadingPhase) {

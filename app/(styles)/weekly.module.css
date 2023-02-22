@@ -1,0 +1,62 @@
+.header > nav {
+  color: #7a2231;
+  padding-top: 20px;
+  font-family: "Poppins", "sans-serif";
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.header{
+    display: flex;
+    flex-direction: column;
+}
+
+.from-to {
+  display: flex;
+  flex-direction: column;
+  padding-right: 30px;
+  border-right: 1px solid #7a2231;
+}
+
+.from-to p {
+  margin-top: -20px;
+  color: rgb(173, 144, 144);
+}
+.avgs {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.avgs h3 {
+  writing-mode: vertical-rl;
+  color:#807EA1;
+}
+.avgs div {
+
+  display: flex;
+  border: 1px solid #7a2231;
+  padding: 10px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=0, Color=#807EA1)"; /*IE 8*/
+  -moz-box-shadow: 0 1px 6px #807ea1; /*FF 3.5+*/
+  -webkit-box-shadow: 0 1px 6px #807ea1; /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  box-shadow: 0 1px 6px #807ea1; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=135, Color=#807EA1); /*IE 5.5-7*/
+}
+
+.w-conditions{
+    display: flex;
+    flex-direction: column;
+}
+
+.each-avg{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
