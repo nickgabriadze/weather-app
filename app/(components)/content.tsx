@@ -22,7 +22,6 @@ const weekDays: { [key: number]: string } = {
 
 const Content = () => {
   const [weatherData, setWeatherData] = useState<any>();
-  const [error, setError] = useState<string>();
   const [loadingPhase, setLoadingPhase] = useState<boolean>(true);
   const city = useAppSelector((state) => state.weather.city);
   const [expand, setExpand] = useState<boolean>(false);

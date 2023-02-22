@@ -5,6 +5,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 
@@ -17,7 +19,12 @@
   display: flex;
   flex-direction: column;
   padding-right: 30px;
-  border-right: 1px solid #7a2231;
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=131, Color=#807EA1)";/*IE 8*/
+-moz-box-shadow: 6px 7px 5px -5px #807EA1;/*FF 3.5+*/
+-webkit-box-shadow: 6px 7px 5px -5px #807EA1;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+box-shadow: 6px 7px 5px -5px #807EA1;/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color=#807EA1); /*IE 5.5-7*/
 }
 
 .from-to p {

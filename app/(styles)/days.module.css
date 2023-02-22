@@ -1,0 +1,30 @@
+.days-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 2rem;
+  gap: 20px;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #807ea1;
+  font-family: "Quicksand", "sans-serif";
+  color: #7a2231;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=0, Color=#807EA1)"; /*IE 8*/
+  -moz-box-shadow: 0 1px 6px #807ea1; /*FF 3.5+*/
+  -webkit-box-shadow: 0 1px 6px #807ea1; /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  box-shadow: 0 1px 6px #807ea1; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=135, Color=#807EA1); /*IE 5.5-7*/
+}
+
+.day h2{
+    color:#807EA1;
+}

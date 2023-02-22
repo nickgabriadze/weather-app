@@ -1,9 +1,10 @@
+
 import weeklystyle from "/app/(styles)/weekly.module.css";
 import Image from "next/image";
 import windPowerIcon from "public/wind-power-icon.svg";
 import thermostatIcon from "public/thermostat-icon.svg";
 import radiationIcon from "public/radiation-icon.svg";
-import {icons} from "app/icons";
+import { icons } from "app/icons";
 import Days from "./days";
 
 const Weekly = async ({ params }: any) => {
@@ -25,10 +26,18 @@ const Weekly = async ({ params }: any) => {
     ];
   });
 
-  const avgWeatherConditions = [...new Set(res.days.map((eachDay: any) => {
-      return eachDay.icon;
-  }))];
+  const avgDailyWeather = res.days.map((eachDay: any) => [
+    eachDay.icon,
+    eachDay.datetime,
+  ]);
 
+  const avgWeatherConditions = [
+    ...new Set(
+      res.days.map((eachDay: any) => {
+        return eachDay.icon;
+      })
+    ),
+  ];
 
   const avgRadiationThroughoutTheWeek =
     avgRadiations
@@ -65,15 +74,17 @@ const Weekly = async ({ params }: any) => {
   const today = dailySpeeds[0][1].replaceAll("-", ".");
   const weekend = dailySpeeds[dailySpeeds.length - 1][1].replaceAll("-", ".");
 
-  
   return (
     <>
       <div className={weeklystyle["header"]}>
         <header>
           <div className={weeklystyle["from-to"]}>
-            <h1>Weekly Weather In {city} </h1>
+            <div style={{display:"flex", flexDirection:"row", gap:"10px"}}>
+              <h1>Weekly Weather In</h1>
+              <h1 style={{ color: "#807ea1" }}>{city}</h1>
+            </div>
             <p>
-              From {today} to {weekend}
+              From {today} to {weekend} (inclusive)
             </p>
           </div>
 
@@ -81,7 +92,7 @@ const Weekly = async ({ params }: any) => {
             <h3 style={{ marginRight: "-15px", textAlign: "center" }}>
               Averages
             </h3>
-            <div /*avg wind speed*/ className={weeklystyle['each-avg']}> 
+            <div /*avg wind speed*/ className={weeklystyle["each-avg"]}>
               <Image
                 src={windPowerIcon}
                 alt="Wind Power icon"
@@ -91,7 +102,7 @@ const Weekly = async ({ params }: any) => {
               <h2>{avgWindSpeedThroughoutTheWeek} km/ph</h2>
             </div>
 
-            <div /*avg temp*/ className={weeklystyle['each-avg']}>
+            <div /*avg temp*/ className={weeklystyle["each-avg"]}>
               <Image
                 src={thermostatIcon}
                 alt="Thermostat icon"
@@ -101,7 +112,7 @@ const Weekly = async ({ params }: any) => {
               <h2>{Math.round(avgTempThroughoutTheWeek)}&deg;</h2>
             </div>
 
-            <div /*avg radiation*/ className={weeklystyle['each-avg']}>
+            <div /*avg radiation*/ className={weeklystyle["each-avg"]}>
               <Image
                 src={radiationIcon}
                 alt="Thermostat icon"
@@ -110,29 +121,34 @@ const Weekly = async ({ params }: any) => {
               />
               <h2>{Math.round(avgRadiationThroughoutTheWeek)} sv/h</h2>
             </div>
-            
-            <div /*avg conditions*/ className={weeklystyle['w-conditions']}>
+
+            <div /*avg conditions*/ className={weeklystyle["w-conditions"]}>
               <div>Weather Conditions</div>
               <div>
-              {avgWeatherConditions.map((each: any, index: number) => {
-                return (
-                  <div key={index} style={{backgroundColor: "#a7a7b4"}}>
-                    <Image
-                      src={icons[each]}
-                      alt={each}
-                      width={40}
-                      height={40}
-                    />
-                   
-                  </div>)
-                
+                {avgWeatherConditions.map((each: any, index: number) => {
+                  return (
+                    <div key={index} style={{ backgroundColor: "#a7a7b4" }}>
+                      <Image
+                        src={icons[each]}
+                        alt={each}
+                        width={40}
+                        height={40}
+                      />
+                    </div>
+                  );
                 })}
               </div>
             </div>
           </div>
         </header>
 
-        <Days />
+        <Days
+          data={{
+            dailyTemp: dailyTemperatures,
+            dailyWind: dailySpeeds,
+            dailyWeather: avgDailyWeather,
+          }}
+        />
       </div>
     </>
   );
