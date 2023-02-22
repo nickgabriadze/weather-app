@@ -69,7 +69,7 @@ const Weekly = async ({ params }: any) => {
   return (
     <>
       <div className={weeklystyle["header"]}>
-        <nav>
+        <header>
           <div className={weeklystyle["from-to"]}>
             <h1>Weekly Weather In {city} </h1>
             <p>
@@ -130,7 +130,7 @@ const Weekly = async ({ params }: any) => {
               </div>
             </div>
           </div>
-        </nav>
+        </header>
 
         <Days />
       </div>
