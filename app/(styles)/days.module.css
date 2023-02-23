@@ -11,12 +11,13 @@
   font-family: 'Quicksand', 'sans-serif';
 }
 .eachDay-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  gap: 20px;
-  flex-wrap: wrap;
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ align-items: stretch;
+ gap: 30px;
+ justify-content: center;
+ padding: 30px;
 }
 .day {
   display: flex;
@@ -28,6 +29,7 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
+  flex-grow: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=0, Color=#807EA1)"; /*IE 8*/
   -moz-box-shadow: 0 1px 6px #807ea1; /*FF 3.5+*/
   -webkit-box-shadow: 0 1px 6px #807ea1; /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
@@ -37,4 +39,28 @@
 
 .day h2 {
   color: #807ea1;
+}
+
+
+.day:hover{
+  
+  position: relative;
+  cursor: pointer;
+  animation-duration: 1s;
+  animation-name: myanimation;
+}
+
+@keyframes myanimation {
+    from {
+      top: 0px;
+    }
+
+    50%{
+      top: -20px;
+    }
+
+    to{
+      top:0px;
+    }
+  
 }
