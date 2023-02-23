@@ -26,6 +26,10 @@ const Weekly = async ({ params }: any) => {
     ];
   });
 
+  const dailyWeatherCondition = res.days.map((eachDay:any) => {
+    return eachDay.conditions;
+  })
+
   const avgDailyWeather = res.days.map((eachDay: any) => [
     eachDay.icon,
     eachDay.datetime,
@@ -147,6 +151,7 @@ const Weekly = async ({ params }: any) => {
             dailyTemp: dailyTemperatures,
             dailyWind: dailySpeeds,
             dailyWeather: avgDailyWeather,
+            dailyWeatherCondition: dailyWeatherCondition
           }}
         />
       </div>
