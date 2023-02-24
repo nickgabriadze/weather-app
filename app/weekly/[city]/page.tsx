@@ -8,11 +8,16 @@ import { icons } from "app/icons";
 import Days from "./days";
 
 const Weekly = async ({ params }: any) => {
+  let error = "";
   const city = params.city.replaceAll("%20", " ").trim();
   const req = await fetch(
     `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/next7days?unitGroup=metric&key=${process.env.NEXT_PUBLIC_API_KEY}&contentType=json`
   );
-  const res = await req.json();
+  const res = await req.json().catch((err) => error = err);
+
+  if (error) {
+    return <div className={weeklystyle["error"]}>{`Sorry, that city either doesn't exist or we weren't able to provide the data 🌦️`}</div>;
+  }
 
   const avgRadiations = res.days.map((eachDay: any) => {
     let dailyRadiation = 0;

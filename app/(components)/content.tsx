@@ -25,12 +25,12 @@ const Content = () => {
   const [loadingPhase, setLoadingPhase] = useState<boolean>(true);
   const city = useAppSelector((state) => state.weather.city);
   const [expand, setExpand] = useState<boolean>(false);
-
+  const [error, setError] = useState<boolean>(false);
   const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&include=hours&key=${process.env.NEXT_PUBLIC_API_KEY}&contentType=json`;
 
   useEffect(() => {
     fetch(url)
-      .then((data) => data.json())
+      .then((data) => data.json()).catch(() => setError(true))
       .then((data) => {
         setLoadingPhase(false);
         setWeatherData(data);
@@ -39,7 +39,12 @@ const Content = () => {
 
   useEffect(() => {
       setLoadingPhase(true);
+      setError(false);
   }, [city])
+
+  if(error){
+    return <><div className={contentstyle['error']}>{`Sorry, that city either doesn't exist or we weren't able to provide the data 🌦️`}</div></>
+  }
 
   const currentHourData = () => {
     if (!loadingPhase) {
